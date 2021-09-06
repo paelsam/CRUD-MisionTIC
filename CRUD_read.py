@@ -25,15 +25,16 @@ def leer(ruta: str, extraer: str):
     def filtrar_estado(info, filtro):  # Para filtrar un archivo por estados.
         for i in info:  # For que tomara los datos del Excel
             if info[i]['estado'] == filtro:  # Condicional que filtrara el estado correspondiente
+                print('*********Tarea**********')
                 result = print(
                         'ID:', str(i),
                         '\nTitulo:', str(info[i]['tarea']),
                         '\nDescripcion:', str(info[i]['descripcion']),
                         '\nEstado:', str(info[i]['estado']),
                         '\nFecha de inicio:', str(info[i]['fecha de inicio']),
-                        '\nFecha de finalizacion', str(
-                            info[i]['fecha de finalizacion'])
+                        '\nFecha de finalizacion', str(info[i]['fecha de finalizacion'])
                         )
+            print('************************')
         return result
 
     # Esto es por si queremos filtrar, mostrara todo si escribimos el estado que queramos filtrar.
@@ -50,10 +51,7 @@ def leer(ruta: str, extraer: str):
                 '\nFecha de inicio:', str(info[i]['fecha de inicio']),
                 '\nFecha de finalizacion', str(info[i]['fecha de finalizacion']))
             print('************************')
-    return
+    return "Succeful Process"
 
 
-# Si lo van a probar, tienen que cambiar la direccion de su archivo de Excel
-rut = r"C:\Users\kinmi\OneDrive\Escritorio\CRUD\docs\Base CRUD.xlsx"
-# Este solo filtrara, el estado. No quise poner un filtrador para los demas, porque haria mucho codigo :'v
-leer(rut, 'todo')
+
