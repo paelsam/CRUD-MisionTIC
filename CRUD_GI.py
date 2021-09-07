@@ -2,7 +2,6 @@ from CRUD_read import leer
 from CRUD_update import actualizar
 from CRUD_create import agregar
 from CRUD_delete import borrar
-import sys
 
 ruta = r"/home/paelsam/Escritorio/CRUD/docs/Base CRUD.xlsx"
 datos = {

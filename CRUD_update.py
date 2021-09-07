@@ -6,7 +6,7 @@ def actualizar(ruta: str, identificador: int, datos_actualizados: dict):
     archivo_excel = load_workbook(ruta)
     # Seleccionamos la hoja que queremos sacar
     hoja_datos = archivo_excel['Datos del CRUD']
-    # Extraemos la informacion desde la fila A2 hasta la maxima fila, F
+    # Extraemos la irmacion desde la fila A2 hasta la maxima fila, F
     hoja_datos = hoja_datos['A2':'F' + str(hoja_datos.max_row)]
     # La funcion 'active' nos ayuda a editar el documento Excel
     hoja = archivo_excel.active
@@ -45,8 +45,12 @@ def actualizar(ruta: str, identificador: int, datos_actualizados: dict):
                 elif d == 'Fecha Finalizado' and not(datos_actualizados[d] == ''):
                     hoja.cell(
                         row=fila, column=fecha_finalizado).value = datos_actualizados[d]
+            print("\n**********TAREA ACTUALIZADA***********")
+            for j,k in datos_actualizados.items():
+                print(f"{j}: {k}")
+            print("****************************************")
     archivo_excel.save(ruta)  # Guardamos los cambios
     if encontro == False:  # Por si el ID no existe
         print("No se encontro el ID especificado. Intentalo de Nuevo")
-    return
+    return "\nSe ha actualizdo con exito! Revisa tu archivo Excel"
 
