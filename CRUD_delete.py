@@ -16,13 +16,7 @@ def borrar(ruta, identificador): # Parametros: Ruta del archivo y El ID a borrar
         if i[0].value == identificador:
             fila = i[0].row # Fila a eliminar
             encontro = True
-            
-            hoja.cell(row=fila, column=1).value = ""
-            hoja.cell(row=fila, column=titulo).value = ""
-            hoja.cell(row=fila, column=descripcion).value = ""
-            hoja.cell(row=fila, column=estado).value = ""
-            hoja.cell(row=fila, column=fecha_inicio).value = ""
-            hoja.cell(row=fila, column=fecha_finalizado).value = ""
+            hoja.delete_rows(fila)
     archivo_excel.save(ruta)
     if encontro == False:
         print("ERROR: No existe un archivo con ese ID")

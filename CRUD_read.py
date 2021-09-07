@@ -34,7 +34,7 @@ def leer(ruta: str, extraer: str):
                         '\nFecha de inicio:', str(info[i]['fecha de inicio']),
                         '\nFecha de finalizacion', str(info[i]['fecha de finalizacion'])
                         )
-            print('************************')
+                print('************************\n')
         return result
 
     # Esto es por si queremos filtrar, mostrara todo si escribimos el estado que queramos filtrar.
@@ -50,7 +50,7 @@ def leer(ruta: str, extraer: str):
                 '\nEstado:', str(info[i]['estado']),
                 '\nFecha de inicio:', str(info[i]['fecha de inicio']),
                 '\nFecha de finalizacion', str(info[i]['fecha de finalizacion']))
-            print('************************')
+            print('************************\n')
     return "Succeful Process"
 
 
