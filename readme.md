@@ -3,5 +3,5 @@
 
 ## Mejoras:
 ### CRUDv4: Mejora en la funcion de la funcion UPDATE.
-### Ahora muestra la informaicon que se actualizó.
+### Ahora muestra la información que se actualizó.
 
